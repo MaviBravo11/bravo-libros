@@ -6,9 +6,6 @@ let carritoFinal = []
 const cardProducto = document.getElementById('cardProducto');
 const contenedorCarrito = document.getElementById('contenedorCarrito');
 
-const botonTerminar = document.getElementById('terminar')
-const finCompra = document.getElementById('fin-compra')
-
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 
@@ -86,7 +83,7 @@ function mostrarCarrito(productoAgregado) {
 
     btnQuitar.addEventListener('click', () => {
         btnQuitar.parentElement.remove()   //se mata al padre
-        carritoFinal = carritoFinal.filter( elemento => elemento.id !== productoAgregado.id)
+        carritoFinal = carritoFinal.filter(elemento => elemento.id !== productoAgregado.id)
         actualizarCarrito()
 
     }
@@ -105,3 +102,20 @@ function actualizarCarrito() {
     precioTotal.innerText = carritoFinal.reduce((contador, elemento) =>
         contador + elemento.precio, 0)
 }
+
+
+
+
+// ---------Formulario-------------------------
+debugger
+nombreFormulario.addEventListener("keypress", (event) => {
+    if (event.keyCode == 13) { //event.key = "Enter"
+        emailFormulario.focus()
+    }
+})
+
+// botonFormulario.addEventListener('click', ()=>
+// location.reload())
+
+// botonFormulario.addEventListener('click', ()=>
+// alert ('Compra realizado con éxito!'))
