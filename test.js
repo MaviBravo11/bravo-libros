@@ -19,20 +19,20 @@ function mostrarProductos() {
 
     baseProductos.forEach(elemento => {
         let div = document.createElement('div')
-        div.className = 'producto'
+        div.className = 'producto col-4'
         div.innerHTML = ` 
-                  <div class="col">
+                 
                       <div class="card m-3 p-2" style="width: 18rem;">
-                       <img src="${elemento.img}" class="card-img-top" alt="...">
+                       <img src="${elemento.img}" class="rounded mx-auto d-block" id="imgCard" alt="...">
                          <div class="card-body">
                           <h6>Ref ID: ${elemento.id} </h6>
-                          <h3 class="card-title">${elemento.nombre}</h3>
+                          <h4 class="card-title">${elemento.nombre}</h4>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                           <h5>Precio: $ ${elemento.precio}</h5>
-                          <a  id="boton${elemento.id}" class="btn btn-primary" >¡LO QUIERO!</a>
+                          <a  id="boton${elemento.id}" class="btn btn-warning fw-bold" >¡LO QUIERO!</a>
                         </div>
                      </div>
-                    </div>
+
                     `
         cardProducto.appendChild(div)       //agrego como hijo el div al padre div 'cardProducto'
 
@@ -72,8 +72,8 @@ function mostrarCarrito(productoAgregado) {
     div.className = 'productoEnElCarrito'
     div.innerHTML =
         `
-     <h4>Producto: ${productoAgregado.nombre}</h4>
-     <h4>Precio: ${productoAgregado.precio} </h4>
+     <h5 class="mt-5">Producto: ${productoAgregado.nombre}</h5>
+     <h5>Precio: ${productoAgregado.precio} </h5>
      <button id="quitarProducto${productoAgregado.id}">Quitar Producto </button>
      `
     contenedorCarrito.appendChild(div)
@@ -107,7 +107,7 @@ function actualizarCarrito() {
 
 
 // ---------Formulario-------------------------
-debugger
+
 nombreFormulario.addEventListener("keypress", (event) => {
     if (event.keyCode == 13) { //event.key = "Enter"
         emailFormulario.focus()
