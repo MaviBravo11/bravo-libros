@@ -1,0 +1,60 @@
+.navbar{
+    background-color: #EEBA19;
+}
+
+#title{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.recomendados{
+    color: #EEBA19;
+    font-size: 65px;
+}
+
+#header{
+    background-color: black;
+}
+
+#imgInicio1{
+    width:260px;
+    height:250px;
+    border-radius:150px;
+    border:2px solid #666;
+    background-color: #EEBA19;
+}
+.carritou {
+    background-color: rgba(232, 237, 237, 0.4);
+}
+
+.precioTotal{
+    background-color: rgb(16, 19, 18);
+    color: rgba(249, 249, 248, 0.994);
+    font-size: 40px;
+    border:1px solid #666;
+}
+
+#prodElegido{
+    color: #EEBA19;
+}
+#imgCard{
+    width:200px;
+    height:300px;
+    border:3px solid #666;
+}
+
+#imgCarrito{
+    width:50px;
+    height:50px;
+}
+
+#formulario{
+    border:1px solid #666;
+
+}
+
+#formularioEnviado{
+    color: #EEBA19;
+}
+.footer{
+    background-color: #EEBA19;
+}
