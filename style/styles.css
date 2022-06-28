@@ -1,3 +1,5 @@
+
+
 .navbar{
     background-color: #EEBA19;
 }
@@ -6,6 +8,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.fondo{
+    background-color: rgba(232, 237, 237, 0.4)
+}
 .recomendados{
     color: #EEBA19;
     font-size: 65px;

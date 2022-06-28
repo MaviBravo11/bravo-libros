@@ -24,7 +24,7 @@ const baseProductos = [
     { id: crearID(), nombre: 'Rebelion en la granja', autor: 'ORWELL, GEORGE', precio: 990, stock: 10, img: '/img/015.jpg' },
     { id: crearID(), nombre: 'Nuestra parte de noche', autor: 'ENRIQUEZ, MARIANA', precio: 2290, stock: 3, img: '/img/016.jpg' },
     { id: crearID(), nombre: 'El funcionamiento general del mundo', autor: 'SACHERI, EDUARDO', precio: 1800, stock: 20, img: '/img/017.jpg' },
-    { id: crearID(), nombre: 'Soy una tonta por quererte', autor: 'SOSA VILLADA, CAMILAl', precio: 2200, stock: 4, img: '/img/018.jpg' },
+    { id: crearID(), nombre: 'Soy una tonta por quererte', autor: 'SOSA VILLADA, CAMILA', precio: 2200, stock: 4, img: '/img/018.jpg' },
     { id: crearID(), nombre: 'Al final mueren los dos', autor: 'SILVERA, ADAM', precio: 3100, stock: 4, img: '/img/019.jpg' },
 ]
 

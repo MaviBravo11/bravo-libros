@@ -71,32 +71,80 @@ function agregarCarrito(id) {
 
 // ---------Ir mostrando Carrito armado--------------------------------------------------
 
+// function mostrarCarrito(productoAgregado) {
+
+//     let div = document.createElement('div')
+//     div.className = 'productoEnElCarrito'
+//     div.innerHTML =
+//         `
+//      <h5 class="mt-5">Producto: ${productoAgregado.nombre}</h5>
+//      <h5>Autor/a: ${productoAgregado.autor}</h5>
+//      <h5>Precio: ${productoAgregado.precio} </h5>
+//      <button class="btn bg-warning" id="quitarProducto${productoAgregado.id}">Quitar Producto </button>
+//      `
+//     contenedorCarrito.appendChild(div)
+
+
+
+
+
+//     let btnQuitar = document.getElementById(`quitarProducto${productoAgregado.id}`)
+//     // console.log(btnQuitar);
+
+//     btnQuitar.addEventListener('click', () => {
+//         btnQuitar.parentElement.remove()   //se mata al padre
+//         carritoFinal = carritoFinal.filter(elemento => elemento.id != productoAgregado.id)
+//         actualizarCarrito()
+
+//     }
+
+//     )
+
+// }
+
+
+
+// OPCION DOS MOSTRAR
+
+
+
 function mostrarCarrito(productoAgregado) {
 
-    let div = document.createElement('div')
-    div.className = 'productoEnElCarrito'
-    div.innerHTML =
-        `
-     <h5 class="mt-5">Producto: ${productoAgregado.nombre}</h5>
-     <h5>Autor/a: ${productoAgregado.autor}</h5>
-     <h5>Precio: ${productoAgregado.precio} </h5>
-     <button class="btn bg-warning" id="quitarProducto${productoAgregado.id}">Quitar Producto </button>
-     `
-    contenedorCarrito.appendChild(div)
+	let div = document.createElement('div');
+	let button = document.createElement("button");
+	button.className = "btn btn-warning";
+	button.innerText = "Quitar producto";
+	div.className = 'productoEnElCarrito';
+	
+	div.innerHTML =
+	`
+	<h5 class="mt-5">Producto: ${productoAgregado.nombre}</h5>
+	<h5>Autor/a: ${productoAgregado.autor}</h5>
+	<h5>Precio: ${productoAgregado.precio} </h5>
+	`
+	div.append(button);
+	contenedorCarrito.appendChild(div)
 
-    let btnQuitar = document.getElementById(`quitarProducto${productoAgregado.id}`)
-    // console.log(btnQuitar);
+	// console.log(btnQuitar);
 
-    btnQuitar.addEventListener('click', () => {
-        btnQuitar.parentElement.remove()   //se mata al padre
-        carritoFinal = carritoFinal.filter(elemento => elemento.id !== productoAgregado.id)
-        actualizarCarrito()
-
-    }
+	button.addEventListener('click', () => {
+		button.parentElement.remove();  //se mata al padre
+		let index = carritoFinal.findIndex((elemento) => {
+			return elemento.id == productoAgregado.id;
+		});
+		carritoFinal.splice(index, 1);
+		actualizarCarrito();
+	}
 
     )
 
 }
+
+
+
+
+
+
 
 // ---------Ir actualizando el carrito : cuando se agregan productos--------------------------------------------------
 
