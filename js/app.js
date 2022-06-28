@@ -67,45 +67,7 @@ function agregarCarrito(id) {
 }
 
 
-
-
-// ---------Ir mostrando Carrito armado--------------------------------------------------
-
-// function mostrarCarrito(productoAgregado) {
-
-//     let div = document.createElement('div')
-//     div.className = 'productoEnElCarrito'
-//     div.innerHTML =
-//         `
-//      <h5 class="mt-5">Producto: ${productoAgregado.nombre}</h5>
-//      <h5>Autor/a: ${productoAgregado.autor}</h5>
-//      <h5>Precio: ${productoAgregado.precio} </h5>
-//      <button class="btn bg-warning" id="quitarProducto${productoAgregado.id}">Quitar Producto </button>
-//      `
-//     contenedorCarrito.appendChild(div)
-
-
-
-
-
-//     let btnQuitar = document.getElementById(`quitarProducto${productoAgregado.id}`)
-//     // console.log(btnQuitar);
-
-//     btnQuitar.addEventListener('click', () => {
-//         btnQuitar.parentElement.remove()   //se mata al padre
-//         carritoFinal = carritoFinal.filter(elemento => elemento.id != productoAgregado.id)
-//         actualizarCarrito()
-
-//     }
-
-//     )
-
-// }
-
-
-
-// OPCION DOS MOSTRAR
-
+// ---------Ir mostrando Carrito armado-------------
 
 
 function mostrarCarrito(productoAgregado) {
@@ -195,6 +157,7 @@ btnEnviar.addEventListener('click', () => {
         `
         formularioEnviado.appendChild(divForm)
     }    
+    
     btnCancelar.click()
     inputNombre.focus()
     localStorage.setItem("Base de datos Clientes", JSON.stringify(baseDatosClientes))
