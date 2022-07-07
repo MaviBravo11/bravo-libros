@@ -24,12 +24,10 @@ function mostrarProductos() {
                      </div>
 
                     `
-        cardProducto.appendChild(div)       //agrego como hijo el div al padre div 'cardProducto'
+        contenidoCardProducto.appendChild(div)       //agrego como hijo el div al padre div 'contenidoCardProducto'
 
-        // debugger
+    
         let btnAgregar = document.getElementById(`boton${elemento.id}`)
-        //    console.log (btnAgregar);
-
         btnAgregar.addEventListener('click', () => {
             agregarCarrito(elemento.id)   //  -----> acá ya estoy llamando a la función agregarCarrito
         })
@@ -104,11 +102,7 @@ function mostrarCarrito(productoAgregado) {
 
 
 
-
-
-
-
-// ---------Ir actualizando el carrito : cuando se agregan productos--------------------------------------------------
+// ---------Ir actualizando el carrito cuando se agregan productos--------------------------------------------------
 
 function actualizarCarrito() {
 
@@ -117,13 +111,12 @@ function actualizarCarrito() {
         contador + elemento.precio, 0)
 }
 
+
 // ---------Formulario compra checkout-------------------------
 
 const baseDatosClientes= [] //
 
-btnEnviar.addEventListener('click', () => {
-    
-   
+btnEnviar.addEventListener('click', () => { 
 
     const chequearDatos = (isNaN(parseInt(inputTel.value)) || inputNombre.value.trim() == "" || emailFormulario.value.trim() == "") 
     if (chequearDatos) {
